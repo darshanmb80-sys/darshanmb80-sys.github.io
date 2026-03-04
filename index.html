@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Darshan | Medical Portfolio & Insights</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --accent: #ef4444;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; color: var(--dark); background: var(--light); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        nav { background: white; padding: 1rem 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 800; font-size: 1.5rem; color: var(--primary); text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--primary); }
+        
+        .hero { padding: 6rem 0; background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%); text-align: center; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; color: var(--dark); }
+        .hero p { font-size: 1.25rem; color: #64748b; max-width: 700px; margin: 0 auto 2rem; }
+        
+        section { padding: 5rem 0; }
+        .section-title { font-size: 2rem; margin-bottom: 3rem; text-align: center; position: relative; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 4px; background: var(--primary); margin: 0.5rem auto 0; border-radius: 2px; }
+        
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about-text p { margin-bottom: 1rem; }
+        
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .skill-card { background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); transition: transform 0.2s; }
+        .skill-card:hover { transform: translateY(-5px); }
+        .skill-card h3 { color: var(--primary); margin-bottom: 1rem; }
+        
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
+        .blog-card { background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .blog-content { padding: 1.5rem; }
+        .blog-tag { background: #dbeafe; color: var(--primary); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600; }
+        .blog-card h3 { margin: 1rem 0; font-size: 1.25rem; }
+        .blog-card p { color: #64748b; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        
+        .contact { text-align: center; background: white; }
+        .btn { display: inline-block; background: var(--primary); color: white; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: opacity 0.2s; }
+        .btn:hover { opacity: 0.9; }
+        
+        footer { padding: 3rem 0; background: var(--dark); color: #94a3b8; text-align: center; }
+        
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">Dr. Darshan</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#blog">Insights</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Medical Graduate & Health Strategist</h1>
+            <p>Bridging clinical excellence with digital health innovation. MD graduate from Philippines, navigating the global medical landscape (USMLE/FMGE).</p>
+            <a href="#contact" class="btn">Let's Connect</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Professional Journey</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I am a medical graduate (MD) from the Philippines, currently based in India. My journey is defined by a passion for medical excellence and a drive to contribute to healthcare systems globally.</p>
+                    <p>I am actively preparing for international medical licensure exams (USMLE Step 1, FMGE, and AMC), focusing on high-yield clinical knowledge and evidence-based practice.</p>
+                    <p>Beyond the clinic, I am a tech-savvy creator exploring the intersection of medicine, digital content, and technology to make medical information more accessible and useful.</p>
+                </div>
+                <div class="about-image">
+                    <div style="background: #e2e8f0; width: 100%; aspect-ratio: 1; border-radius: 1rem; display: flex; align-items: center; justify-content: center; font-size: 4rem;">🩺</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" style="background: white;">
+        <div class="container">
+            <h2 class="section-title">Expertise & Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Clinical Medicine</h3>
+                    <p>Strong foundation in Internal Medicine, OB-GYN, and Surgery. Experienced in clinical rotations and case management.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Medical Writing</h3>
+                    <p>Creating high-yield study resources, clinical notes, and health-tech content for international licensure prep.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Digital Health</h3>
+                    <p>Proficient in AI tools, digital note-taking (iPad/Notion), and leveraging technology for medical education.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <div class="container">
+            <h2 class="section-title">Latest Insights</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-content">
+                        <span class="blog-tag">USMLE Prep</span>
+                        <h3>Mastering High-Yield Concepts</h3>
+                        <p>Strategies for tackling Step 1 concepts with a focus on pathology and pharmacology integration...</p>
+                        <a href="#" style="color: var(--primary); font-weight: 600; text-decoration: none;">Coming Soon</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-content">
+                        <span class="blog-tag">Career</span>
+                        <h3>The Philippines-to-Global Pathway</h3>
+                        <p>A comprehensive guide for IMGs navigating licensure and residency applications from the Philippines...</p>
+                        <a href="#" style="color: var(--primary); font-weight: 600; text-decoration: none;">Coming Soon</a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-content">
+                        <span class="blog-tag">Education</span>
+                        <h3>AI in Medical Education</h3>
+                        <p>How I use AI tools to streamline my study workflow and maximize retention for high-stakes exams...</p>
+                        <a href="#" style="color: var(--primary); font-weight: 600; text-decoration: none;">Coming Soon</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p style="margin-bottom: 2rem; color: #64748b;">Interested in collaborating or have questions about medical pathways?</p>
+            <a href="mailto:darshanmb80@gmail.com" class="btn">Email Me</a>
+            <div style="margin-top: 2rem; display: flex; justify-content: center; gap: 1.5rem;">
+                <a href="#" style="color: var(--dark); text-decoration: none;">LinkedIn</a>
+                <a href="#" style="color: var(--dark); text-decoration: none;">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Dr. Darshan. MD graduate from Philippines.</p>
+            <p style="font-size: 0.875rem; margin-top: 0.5rem;">Committed to medical excellence & digital innovation.</p>
+        </div>
+    </footer>
+</body>
+</html>
